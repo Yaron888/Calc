@@ -1,0 +1,104 @@
+.calc {
+    margin: 50px auto;
+    width: 300px;
+    height: 500px;
+    
+    border-radius: 20px;
+    color: white;
+    font-family: Arial;
+    padding: 18px;
+    box-shadow: 4px 4px 4px #4f4f4f;
+    background-image: url(https://mobimg.b-cdn.net/v3/fetch/12/122f7350faedfa088953a428d477b0c8.jpeg)
+
+}
+
+.calc-screen {
+    height: 70px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 25px;
+    margin-top: 55px;
+}
+
+
+.calc-screen p {
+    text-align: right;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.buttons {
+    color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: 
+    "ac plus-minus percent division"
+    "seven eigth nine multi"
+    "four five six minus"
+    "one two three plus"
+    "zero zero dot equal";
+    grid-gap: 7px;
+    justify-items: center;
+    opacity: 1;
+    
+}
+
+.btn {
+    width: 60px;
+    height: 55px;
+    background: black;
+    border-radius: 15%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.6;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 3px solid rgba(0,0,0,0.5);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+      inset 0 1px rgba(255,255,255,0.3), 
+      inset 0 10px rgba(255,255,255,0.2), 
+      inset 0 10px 20px rgba(255,255,255,0.25), 
+      inset 0 -15px 30px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5),
+      inset 0 1px rgba(255,255,255,0.3),
+      inset 0 10px rgba(255,255,255,0.2),
+      inset 0 10px 20px rgba(255,255,255,0.25),
+      inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.5),
+      inset 0 1px rgba(255,255,255,0.3),
+      inset 0 10px rgba(255,255,255,0.2),
+      inset 0 10px 20px rgba(255,255,255,0.25),
+      inset 0 -15px 30px rgba(0,0,0,0.3);
+    
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-radius: 34px;
+    opacity: 0.7;
+    
+}
+
+.btn:hover {
+    filter: brightness(90%);
+    
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+.btn.bg-grey {
+    background: white;
+}
+
+.btn.bg-orange {
+    background: black;
+}
+
