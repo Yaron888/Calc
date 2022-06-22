@@ -6,8 +6,11 @@ let finish = false;
 const digit = [`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `.`];
 const action = [`-`, `+`, `X`, `/`];
 
+
+// Out для вывода чисел на экран
 const out = document.querySelector(`.calc-screen p`);
 
+// Функция clearAll выполняеться для очистки переменной
 function clearAll () {
     a = ``;
     b = ``;
@@ -20,13 +23,16 @@ function clearAll () {
 document.querySelector(`.ac`).onclick = clearAll;
 
 document.querySelector(`.buttons`).onclick = (event) => {
+    // Нажата не кнопка
     if(!event.target.classList.contains(`btn`)) return;
+    // Нажата кнопка ac clearAll
     if(event.target.classList.contains(`ac`)) return;
     
     out.textContent = ``;
-
+    // Получаю нажатую кнопку
     const key = event.target.textContent;
 
+    // Нажата кнопка 0-9 или . 
     if (digit.includes(key)) {
         if(b ===`` && sign ===``) {
         a+=key;
@@ -47,6 +53,7 @@ document.querySelector(`.buttons`).onclick = (event) => {
         return;
     }
 
+    // Если нажата кнопка + - * /
     if (action.includes(key)) {
         sign = key;
         out.textContent = sign;
@@ -54,6 +61,7 @@ document.querySelector(`.buttons`).onclick = (event) => {
         return;
     }
 
+    // Нажата =
     if (key === `=`) {
         if (b === ``) b = a;
         switch (sign) {
